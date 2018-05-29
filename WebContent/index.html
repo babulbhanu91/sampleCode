@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search and Replace</title>
+</head>
+<body>
+<input id ="path" type="text">Path</input>
+<input id ="searchText" type="text">Search Text</input>
+<input id ="replaceText" type="text">Replace Text</input>
+<button onclick="httpGetAsync()">Send</button>
+<script type="text/javascript">
+function findReplace(){
+	/* path=document.getElementById("path").value;
+	searchText=document.getElementById("searchText").value;
+	replaceText=document.getElementById("replaceText").value;
+	var client = new HttpClient();
+	client.get('/rest/search?path='+path+'&searchText='+searchText+'&replaceText='+replaceText, function(response) {
+	    console.log(response);
+	}); */
+}
+
+function httpGetAsync()
+{
+	path=document.getElementById("path").value;
+	searchText=document.getElementById("searchText").value;
+	replaceText=document.getElementById("replaceText").value;
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+    	//var data = JSON.parse(xmlHttp.responseText);
+    	console.log(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", '/sampleproject3/rest/search?path='+path+'&searchText='+searchText+'&replaceText='+replaceText, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+</script>
+</body>
+</html>
