@@ -84,9 +84,6 @@ public class FindReplace {
 		return arr;
 	}
 
-	/*public static void main(String[] args) {
-		FindReplace fr = new FindReplace("babli", "incident", "deepakgarg");
-		System.out.println(fr.findAndReplace());
-	}*/
+	
 
 }
